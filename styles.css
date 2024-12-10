@@ -1,0 +1,129 @@
+/* Основний контейнер */
+.container {
+  width: 90%; /* Гумова ширина */
+  margin: 0 auto;
+  max-width: 1200px; /* Максимальна ширина */
+}
+
+/* Загальний стиль */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+/* Flexbox */
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Header */
+.header {
+  background-color: black;
+  color: white;
+  padding: 1rem 0;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  margin-right: 1rem;
+  font-weight: bold;
+}
+
+.city-dropdown {
+  color: white;
+  font-weight: bold;
+}
+
+/* Основний контент */
+.course {
+  text-align: center;
+  padding: 2rem 0;
+  background-color: white;
+}
+
+.course h1 {
+  color: orange;
+  font-size: 2rem;
+}
+
+.course-content {
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.course-content img {
+  max-width: 40%;
+  height: auto;
+  flex: 1 1 300px;
+}
+
+.course-content ul {
+  flex: 1 1 300px;
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+/* Випускники */
+.graduates {
+  background-color: rgb(246, 246, 246);
+  color: rgb(10, 10, 10);
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.cards {
+  gap: 1.5rem;
+}
+
+.card {
+  background-color: white;
+  color: black;
+  border-radius: 10px;
+  padding: 1rem;
+  max-width: 250px;
+  flex: 1 1 calc(33.333% - 1rem);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.student-photo {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* Footer */
+.footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+/* Адаптивність */
+@media (max-width: 768px) {
+  .course-content {
+    flex-direction: column;
+  }
+
+  .card {
+    flex: 1 1 calc(50% - 1rem);
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    flex: 1 1 100%;
+  }
+
+  .menu {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
